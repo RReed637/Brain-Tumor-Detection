@@ -1,57 +1,16 @@
-Brain Tumor Detector
-==============================
+Brain Tumor Detection model that utilizes the YoloV8 object detection model. This model has been trained on images gathered from a kaggle dataset. However, I believe the dataset's original origin is roboflow. 
 
-This project will use Tensorflow to detect brain tumors. It will use a dataset from kaggle as it test and training sets.
+In the following section charts showing the Box Loss, Class Loss and, Object Loss are provided. 
 
-Project Organization
-------------
-
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+![Box Loss](https://github.com/RReed637/Brain-Tumor-Detection/assets/158175741/0d928aeb-52ba-40f5-9248-edef5ad90b52)
 
 
---------
+![Classification Loss](https://github.com/RReed637/Brain-Tumor-Detection/assets/158175741/dd7ad8fe-d9c7-481b-a176-bc8a3f53068c)
+![Loss](https://github.com/RReed637/Brain-Tumor-Detection/assets/158175741/2461c1a9-2c64-4929-b467-fb2e9135be5e)
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+Example Output Images: 
+
+![detections (3)](https://github.com/RReed637/Brain-Tumor-Detection/assets/158175741/3099fd9b-0c75-4109-a692-d4c559389bff)
+
+The detections are not as accurate as they could be. In future iterations of this model, I aim to make the detections more accurate. I will start by trying different optimizers and move on from there.
+
